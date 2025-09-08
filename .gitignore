@@ -20,5 +20,5 @@ plots/
 # Allow small CSVs (comment out if you want to ignore all results)
 # results/
 
-nn.py
+nn.py   
 XOR_predictions.py
