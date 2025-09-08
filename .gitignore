@@ -14,8 +14,7 @@ venv/
 
 # Large artifacts
 plots/
-*.png
-*.jpg
+
 
 # Allow small CSVs (comment out if you want to ignore all results)
 # results/
