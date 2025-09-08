@@ -40,9 +40,9 @@ It is trained and evaluated on the **MNIST handwritten digits dataset**, compari
 
 ## 📈 Best Model (NN v2: 64 hidden, batch=32, lr=0.001, 10 epochs)
 
-![Loss Curve](plots/MNIST_v2_epochs_10_hidden_64_lr_0.001_batch_32/loss_curve_mnist_v2_epochs_10.png)  
-![Val Accuracy](plots/MNIST_v2_epochs_10_hidden_64_lr_0.001_batch_32/val_metrics_mnist_v2_epochs_10.png)  
-![Confusion Matrix](plots/MNIST_v2_epochs_10_hidden_64_lr_0.001_batch_32/confusion_matrix_mnist_v2.png)  
+![Loss Curve](results/best_result_v2/loss_curve_mnist_v2_epochs_10.png)  
+![Val Accuracy](results/best_result_v2/val_metrics_mnist_v2_epochs_10.png)  
+![Confusion Matrix](results/best_result_v2/confusion_matrix_mnist_v2.png)  
 
 ---
 
