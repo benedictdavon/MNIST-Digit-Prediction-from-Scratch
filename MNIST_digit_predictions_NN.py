@@ -1,7 +1,9 @@
 import numpy as np
 from tensorflow import keras
-from nn_multiclass import NN
-from nn_multiclass_v2 import NN as NN_v2
+from models.NN.nn_multiclass import NN
+from models.NN.nn_multiclass_v2 import NN as NN_v2
+
+from models import CNN
 
 import csv, os, datetime as dt
 
