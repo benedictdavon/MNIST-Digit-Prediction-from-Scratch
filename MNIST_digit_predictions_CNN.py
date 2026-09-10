@@ -6,24 +6,12 @@ import matplotlib.cm as colormap
 from tensorflow import keras
 
 from models.CNN import CNN
+from models.CNN.helpers.Backend import backend
 
-import cupy as cp
-
-gpu_count = cp.cuda.runtime.getDeviceCount()
-print(f"GPU devices found: {gpu_count}")
-if gpu_count == 0:
-    raise RuntimeError("No GPU devices found. GPU is required for this script.")
-
-# AFTER (prefer GPU, fallback to CPU)
-try:
-    USING_GPU = True
-except Exception:
-    USING_GPU = False
-
-if 'USING_GPU' in globals() and USING_GPU:
+if backend.use_gpu:
     print("[CNN] Using GPU via CuPy")
 else:
-    print("[CNN] Using CPU (NumPy)")
+    print("[CNN] Using CPU (NumPy); install a compatible CuPy/CUDA stack for GPU execution")
 
 
 # ------------------ Helpers ------------------

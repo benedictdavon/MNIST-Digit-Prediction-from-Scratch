@@ -1,5 +1,7 @@
 import numpy as np
 
+from ..helpers.Backend import backend
+
 
 class AdamWOptimizer:
     def __init__(
@@ -26,8 +28,8 @@ class AdamWOptimizer:
         for p, g in self.params:
             pid = id(p)
             if pid not in self._m:
-                self._m[pid] = np.zeros_like(p)
-                self._v[pid] = np.zeros_like(p)
+                self._m[pid] = backend.zeros_like(p)
+                self._v[pid] = backend.zeros_like(p)
             m = self._m[pid]
             v = self._v[pid]
             # Adam moments (in-place)
@@ -39,7 +41,7 @@ class AdamWOptimizer:
             if wd != 0.0:
                 p -= lr * wd * p
             # Adam update
-            p -= lr * (m_hat / (np.sqrt(v_hat) + self.eps))
+            p -= lr * (m_hat / (backend.sqrt(v_hat) + self.eps))
             self._m[pid] = m
             self._v[pid] = v
 
